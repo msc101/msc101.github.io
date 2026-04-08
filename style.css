@@ -1,0 +1,77 @@
+
+:root {
+    --arkaplan: #f4f4f9;
+    --yazi-renk: #333;
+    --kutu-arkaplan: #fff;
+    --vurgu: #007BFF;
+}
+
+.karanlik-mod {
+    --arkaplan: #1a1a1a;
+    --yazi-renk: #f4f4f9;
+    --kutu-arkaplan: #2d2d2d;
+    --vurgu: #4da3ff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background-color: var(--arkaplan);
+    color: var(--yazi-renk);
+    transition: background 0.3s, color 0.3s;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--kutu-arkaplan);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.menu { list-style: none; display: flex; gap: 20px; }
+.menu a { text-decoration: none; color: var(--yazi-renk); font-weight: bold; }
+#temaButonu { background: none; border: none; cursor: pointer; font-size: 20px; color: var(--yazi-renk); }
+
+
+section { padding: 80px 5%; text-align: center; }
+section h2 { margin-bottom: 30px; font-size: 32px; }
+
+
+#daktiloMetni { color: var(--vurgu); border-right: 2px solid var(--vurgu); padding-right: 5px; }
+
+
+.egitim-bilgisi { margin-bottom: 30px; font-size: 18px; line-height: 1.6; }
+.yetenek-kutusu { max-width: 600px; margin: 0 auto; text-align: left; }
+.bar-arkaplan { width: 100%; background-color: #ddd; border-radius: 5px; margin-top: 5px; margin-bottom: 20px; }
+.bar-dolgu { height: 20px; background-color: var(--vurgu); width: 0%; border-radius: 5px; transition: width 1.5s ease-in-out; }
+
+
+.filtre-butonlari { margin-bottom: 30px; }
+.filtre-butonlari button { padding: 10px 20px; margin: 5px; cursor: pointer; border: none; background-color: var(--vurgu); color: white; border-radius: 5px; }
+.proje-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.proje-kart { background-color: var(--kutu-arkaplan); width: 300px; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.proje-kart img { width: 100%; border-radius: 5px; height: 150px; object-fit: cover; }
+.proje-kart h3 { margin: 15px 0 10px; }
+
+
+.iletisim-linkleri a { display: inline-block; margin: 10px; padding: 10px 20px; background-color: var(--vurgu); color: white; text-decoration: none; border-radius: 5px; }
+
+.profil-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--vurgu);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    nav { flex-direction: column; gap: 15px; }
+    .menu { flex-direction: column; align-items: center; }
+}
